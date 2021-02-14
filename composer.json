@@ -1,0 +1,19 @@
+{
+    "name": "caravan/package",
+    "description": "This package intended to manage trips",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "doudouinfo",
+            "email": "daoudbelmerabet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Caravan\\Package\\": "app/"
+        }
+    }
+}
