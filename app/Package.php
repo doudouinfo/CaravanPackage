@@ -12,8 +12,8 @@ class Package extends Model
      * @var string
      */
     protected $table = 'packages';
-    protected $fillable = ['package_type','package_name','package_status','categorie','package_destination',
-                           'package_description','package_image_vedette','package_gallery','user_id','agency_id','partage','partage_all',
+    protected $fillable = ['package_type','package_name','package_status','category','package_destination',
+                           'package_description','package_featured_image','package_gallery','user_id','agency_id','sharing','sharing_all',
                           ];
 
     protected $casts = [
@@ -21,3 +21,4 @@ class Package extends Model
     ];
 
 }
+

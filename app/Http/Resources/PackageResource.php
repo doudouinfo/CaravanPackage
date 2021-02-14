@@ -19,14 +19,13 @@ class PackageResource extends JsonResource
             'id' => (int) $this->id,
             'name' => $this->package_name,
             'status' => $this->package_status,
-            'categorie' => $this->categorie,
+            'categorie' => $this->category,
             'destination' => $this->package_destination,
             'description' => $this->package_description,
-            'image_vedette' => $this->package_image_vedette,
+            'image_vedette' => $this->package_featured_image,
             'gallery' => $this->package_gallery,
-            'partage' => $this->partage,
-            'partage_all' => (Boolean) $this->partage_all,
+            'partage' => $this->sharing,
+            'partage_all' => (Boolean) $this->sharing_all,
         ];
     }
 }
-
