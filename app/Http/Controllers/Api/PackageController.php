@@ -7,7 +7,6 @@ use Caravan\Package\Http\Requests\Package\UpdatePackageRequest;
 use Caravan\Package\Http\Resources\PackageResource;
 use Caravan\Package\Package;
 use Caravan\Package\Repositories\Package\PackageRepository;
-use Illuminate\Http\Request;
 use Spatie\QueryBuilder\QueryBuilder;
 use Vanguard\Http\Controllers\Api\ApiController;
 
@@ -16,7 +15,9 @@ class PackageController extends ApiController
 {
 
     private $packages;
-    private $only = ['package_name', 'package_type'];
+    private $only = ['package_type','package_name','package_status','category','package_destination',
+                     'package_description','package_featured_image','package_gallery','user_id','agency_id',
+                     'sharing','sharing_all'];
 
     public function __construct(PackageRepository $packages)
     {
@@ -41,10 +42,8 @@ class PackageController extends ApiController
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param CreatePackageRequest $request
+     * @return PackageResource
      */
     public function store(CreatePackageRequest $request)
     {

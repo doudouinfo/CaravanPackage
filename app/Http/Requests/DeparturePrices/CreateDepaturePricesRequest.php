@@ -1,10 +1,10 @@
 <?php
 
-namespace Caravan\Package\Http\Requests\Package;
+namespace Caravan\Package\Http\Requests\DepaturePrices;
 
 use Vanguard\Http\Requests\Request;
 
-class CreatePackageRequest extends Request
+class CreateDepaturePricesRequest extends Request
 {
     /**
      * Get the validation rules that apply to the request.
