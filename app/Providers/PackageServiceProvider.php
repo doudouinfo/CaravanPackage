@@ -4,6 +4,7 @@ namespace Caravan\Package\Providers;
 use Caravan\Package\Repositories\Package\PackageRepository;
 use Caravan\Package\Repositories\Package\EloquentPackage;
 use Illuminate\Support\ServiceProvider;
+use Vanguard\Traits\ManageFilesTrait;
 
 class PackageServiceProvider extends ServiceProvider
 {

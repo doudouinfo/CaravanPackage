@@ -8,7 +8,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('packages/store', 'PackageController@store');
     Route::get('packages/{PackagesId}', 'PackageController@show');
     Route::put('packages/{package}/update', 'PackageController@update');
-    Route::delete('packages/{package}/destory', 'PackageController@destroy');
+    Route::delete('packages/{package}/destroy', 'PackageController@destroy');
 });
 
 

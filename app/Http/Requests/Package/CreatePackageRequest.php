@@ -14,8 +14,17 @@ class CreatePackageRequest extends Request
     public function rules()
     {
         return [
-            'package_name' => 'required|regex:/^[a-zA-Z0-9\-_\.]+$/|unique:packages,package_name',
-            'package_type' => 'required|regex:/^[a-zA-Z0-9\-_\.]+$/|'
+            'package_name' => "required|regex:/^[a-zA-Z'0-9\-_\.]+$/|unique:packages,package_name",
+            'package_type' => 'required',
+            'package_status' => 'required',
+            'category' => 'required',
+            'package_destination[]*' => 'required|array',
+            'sharing[]*' => 'required|array',
+            //'description' => 'required',
+            'imageUpload' => 'required|image|mimes:jpeg,jpg,png|max:2000',
+            //'galleryUpload.*' => 'required|mimes:jpg,jpeg,png|max:5000'
         ];
     }
 }
+
+

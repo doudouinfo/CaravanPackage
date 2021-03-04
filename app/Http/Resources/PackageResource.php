@@ -3,7 +3,7 @@
 namespace Caravan\Package\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use phpDocumentor\Reflection\Types\Boolean;
+
 
 class PackageResource extends JsonResource
 {
@@ -18,13 +18,14 @@ class PackageResource extends JsonResource
         return [
             'id' => (int) $this->id,
             'name' => $this->package_name,
+            'type' => $this->package_type,
             'status' => $this->package_status,
             'categorie' => $this->category,
             'destination' => $this->package_destination,
             'description' => $this->package_description,
             'image_vedette' => $this->package_featured_image,
             'gallery' => $this->package_gallery,
-            'partage' => $this->sharing,
+            'sharing' => $this->sharing,
             'partage_all' => (Boolean) $this->sharing_all,
         ];
     }
